@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learning_demo/dashboard/common_item.dart';
+import 'package:flutter_learning_demo/flutter_widget/widget_home_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -46,6 +47,9 @@ class _HomePageState extends State<HomePage> {
               ConstWidget.commonItem(
                 index: "1",
                 name: "Flutter Widget",
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const WidgetHomeScreen()));
+                }
               ),
               ConstWidget.commonItem(
                 index: "2",
@@ -74,6 +78,10 @@ class _HomePageState extends State<HomePage> {
               ConstWidget.commonItem(
                 index: "8",
                 name: "Dark Theme",
+              ),
+              ConstWidget.commonItem(
+                index: "9",
+                name: "Api Calling",
               ),
             ],
           ),
