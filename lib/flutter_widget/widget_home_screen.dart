@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning_demo/flutter_widget/pages/listview_screen.dart';
 
 class WidgetHomeScreen extends StatelessWidget {
   const WidgetHomeScreen({super.key});
@@ -13,7 +14,7 @@ class WidgetHomeScreen extends StatelessWidget {
           bottom: TabBar(tabs: [
             Tab(text: "Text"),
             Tab(text: "Button"),
-            Tab(text: "List"),
+            Tab(text: "Listview"),
           ]),
         ),
         body: Center(
@@ -21,7 +22,7 @@ class WidgetHomeScreen extends StatelessWidget {
             children: [
               Icon(Icons.directions_car),
               Icon(Icons.directions_transit),
-              Icon(Icons.directions_bike),
+              ListViewgScreen(),
             ],
           ),
         ),
