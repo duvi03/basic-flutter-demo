@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning_demo/api_calling/screen/api_home_screen.dart';
 import 'package:flutter_learning_demo/dashboard/common_item.dart';
 import 'package:flutter_learning_demo/flutter_widget/widget_home_screen.dart';
 
@@ -82,6 +83,9 @@ class _HomePageState extends State<HomePage> {
               ConstWidget.commonItem(
                 index: "9",
                 name: "Api Calling",
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const ApiHomeScreen()));
+                }
               ),
             ],
           ),

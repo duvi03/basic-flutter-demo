@@ -1,0 +1,10 @@
+Api Calling - 2hr:30m
+
+https://api.escuelajs.co/api/v1/categories/
+https://api.escuelajs.co/api/v1/products/
+
+1. Create Product screen UI
+2. In that add category in horizontal list with api integration.
+3. In same screen add product in vertical list with api integration.
+4. Then filter the list according to category wise product listing.
+5. If category name is not found in product list then display "Empty List" or "No data found".

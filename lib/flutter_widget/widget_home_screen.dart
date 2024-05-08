@@ -22,7 +22,7 @@ class WidgetHomeScreen extends StatelessWidget {
             children: [
               Icon(Icons.directions_car),
               Icon(Icons.directions_transit),
-              ListViewgScreen(),
+              ListViewScreen(),
             ],
           ),
         ),
