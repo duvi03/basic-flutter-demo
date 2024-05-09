@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning_demo/flutter_widget/pages/listview_screen.dart';
+import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/1_flutter_widget/pages/listview_screen.dart';
 
 class WidgetHomeScreen extends StatelessWidget {
   const WidgetHomeScreen({super.key});

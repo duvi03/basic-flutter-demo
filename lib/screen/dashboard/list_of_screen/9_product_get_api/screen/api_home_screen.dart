@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning_demo/api_calling/controller/api_home_controller.dart';
-import 'package:flutter_learning_demo/api_calling/screen/common_product_item.dart';
 import 'package:flutter_learning_demo/core/constant/int_extension_file.dart';
+import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/9_product_get_api/controller/api_home_controller.dart';
+import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/9_product_get_api/screen/common_product_item.dart';
 import 'package:get/get.dart';
-import 'package:shimmer/shimmer.dart';
 
 class ApiHomeScreen extends StatelessWidget {
   const ApiHomeScreen({super.key});

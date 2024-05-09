@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning_demo/dashboard/home_screen.dart';
+import 'package:flutter_learning_demo/screen/dashboard/home_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
