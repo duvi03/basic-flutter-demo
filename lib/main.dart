@@ -3,6 +3,7 @@ import 'package:flutter_learning_demo/screen/dashboard/home_screen.dart';
 
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learning_demo/screen/dashboard/common_item.dart';
 import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/1_flutter_widget/widget_home_screen.dart';
+import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/2_sqlite_database/screen/sql_home_screen.dart';
 import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/9_product_get_api/screen/api_home_screen.dart';
 
 class HomePage extends StatefulWidget {
@@ -54,7 +55,10 @@ class _HomePageState extends State<HomePage> {
               ),
               ConstWidget.commonItem(
                 index: "2",
-                name: "Local Database",
+                name: "Sqlite Database",
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const SqlHomeScreen()));
+                  }
               ),
               ConstWidget.commonItem(
                 index: "3",
