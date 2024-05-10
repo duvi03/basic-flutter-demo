@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_learning_demo/core/constant/int_extension_file.dart';
 import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/9_product_get_api/controller/api_home_controller.dart';
@@ -9,22 +10,45 @@ class ApiHomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        surfaceTintColor: Colors.transparent,
-        automaticallyImplyLeading: false,
-        centerTitle: false,
-        title: Text("Product List"),
-      ),
-      body: GetX<ApiHomeController>(
-          init: ApiHomeController(),
-          builder: (controller) {
-            return Column(
+    return GetX<ApiHomeController>(
+        init: ApiHomeController(),
+        builder: (controller) {
+          return Scaffold(
+            appBar: AppBar(
+              surfaceTintColor: Colors.transparent,
+              automaticallyImplyLeading: false,
+              centerTitle: false,
+              title: controller.isVisible.value == false
+                  ? const Text("Product List")
+                  : TextField(
+                      controller: controller.textEditingController.value,
+                      onChanged: (value) {
+                        controller.filterProductByPrice(value);
+                      },
+                      decoration: InputDecoration(
+                        contentPadding: EdgeInsets.symmetric(horizontal: 10),
+                        labelText: "Filter Here",
+                        border: OutlineInputBorder(),
+                      ),
+                    ),
+              actions: [
+                GestureDetector(
+                  onTap: () {
+                    controller.isVisible.value = !controller.isVisible.value;
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 18.0),
+                    child: Icon(Icons.menu_sharp),
+                  ),
+                ),
+              ],
+            ),
+            body: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
                   height: 60,
-                  padding: EdgeInsets.symmetric(vertical: 8),
+                  padding: const EdgeInsets.symmetric(vertical: 8),
                   child: ListView.separated(
                     shrinkWrap: true,
                     itemCount: controller.categoryModel.length,
@@ -108,8 +132,8 @@ class ApiHomeScreen extends StatelessWidget {
                             ),
                 )
               ],
-            );
-          }),
-    );
+            ),
+          );
+        });
   }
 }

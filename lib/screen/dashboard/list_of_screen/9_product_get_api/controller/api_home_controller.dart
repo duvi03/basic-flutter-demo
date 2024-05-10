@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/9_product_get_api/model/catgory_model.dart';
 import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/9_product_get_api/model/product_model.dart';
 import 'package:get/get.dart';
@@ -11,6 +13,8 @@ class ApiHomeController extends GetxController {
   RxList<ProductModel> filterProductModel = RxList([]);
   RxBool isNameFound = RxBool(false);
   RxnInt isSelectedIndex = RxnInt();
+  Rx<TextEditingController> textEditingController = Rx(TextEditingController());
+  RxBool isVisible = RxBool(false);
 
   @override
   void onInit() {
@@ -63,6 +67,11 @@ class ApiHomeController extends GetxController {
       }
       print(filterProductModel.toString());
     }
+  }
+
+   filterProductByPrice(String price){
+    filterProductModel.value = productModel.where((p0) => p0.price.toString().contains(price)).toList();
+    update();
   }
 
 }
