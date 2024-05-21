@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learning_demo/screen/dashboard/common_item.dart';
 import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/1_flutter_widget/widget_home_screen.dart';
 import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/2_sqlite_database/screen/sql_home_screen.dart';
-import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/9_product_get_api/screen/api_home_screen.dart';
+// import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/3_dark_theme/dark_theme_screen.dart';
+import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/4_product_get_api/screen/api_home_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -62,30 +63,14 @@ class _HomePageState extends State<HomePage> {
               ),
               ConstWidget.commonItem(
                 index: "3",
-                name: "Animation",
+                name: "Dark Theme",
+                onTap: (){
+
+                  // Navigator.push(context, MaterialPageRoute(builder: (context) => const DarkThemeScreen()));
+                }
               ),
               ConstWidget.commonItem(
                 index: "4",
-                name: "Firebase CRUD",
-              ),
-              ConstWidget.commonItem(
-                index: "5",
-                name: "Logical Task",
-              ),
-              ConstWidget.commonItem(
-                index: "6",
-                name: "Firebase FCM",
-              ),
-              ConstWidget.commonItem(
-                index: "7",
-                name: "Social login",
-              ),
-              ConstWidget.commonItem(
-                index: "8",
-                name: "Dark Theme",
-              ),
-              ConstWidget.commonItem(
-                index: "9",
                 name: "Product Get Api",
                 onTap: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context) => const ApiHomeScreen()));

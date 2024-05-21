@@ -2,9 +2,10 @@ import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/9_product_get_api/model/catgory_model.dart';
-import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/9_product_get_api/model/product_model.dart';
+import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/4_product_get_api/model/catgory_model.dart';
+import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/4_product_get_api/model/product_model.dart';
 import 'package:get/get.dart';
+import 'package:get/get_rx/get_rx.dart';
 import 'package:http/http.dart' as http;
 
 class ApiHomeController extends GetxController {
@@ -13,8 +14,14 @@ class ApiHomeController extends GetxController {
   RxList<ProductModel> filterProductModel = RxList([]);
   RxBool isNameFound = RxBool(false);
   RxnInt isSelectedIndex = RxnInt();
+  RxnString categoryName = RxnString();
   Rx<TextEditingController> textEditingController = Rx(TextEditingController());
   RxBool isVisible = RxBool(false);
+  RxBool isAlignedRight = RxBool(false);
+
+  void toggleAlignment() {
+    isAlignedRight.value = !isAlignedRight.value; // Toggle the alignment state
+  }
 
   @override
   void onInit() {
@@ -57,21 +64,21 @@ class ApiHomeController extends GetxController {
     print("Response Product ${productModel.toString()}");
   }
 
-  onCategoryClick({required String categoryName}){
+  onCategoryClick({required String categoryName}) {
     isNameFound.value = true;
+    isVisible.value = false;
     print("onSelect $categoryName");
     filterProductModel.clear();
-    for(var value in productModel){
-      if(categoryName == value.category?.name){
+    for (var value in productModel) {
+      if (categoryName == value.category?.name) {
         filterProductModel.add(value);
       }
       print(filterProductModel.toString());
     }
   }
 
-   filterProductByPrice(String price){
-    filterProductModel.value = productModel.where((p0) => p0.price.toString().contains(price)).toList();
-    update();
+  searchProductList(String name) {
+    isSelectedIndex = RxnInt();
+    filterProductModel.value = productModel.where((p0) => p0.title!.toLowerCase().toString().contains(name.toLowerCase())).toList();
   }
-
 }

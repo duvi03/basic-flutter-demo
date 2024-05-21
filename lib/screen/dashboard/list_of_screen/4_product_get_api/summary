@@ -1,4 +1,4 @@
-Product List Api Calling - 2hr:30m
+Product List Api Calling using Getx - 3hr
 
 https://api.escuelajs.co/api/v1/categories/
 https://api.escuelajs.co/api/v1/products/
@@ -8,4 +8,4 @@ https://api.escuelajs.co/api/v1/products/
 3. In same screen add product in vertical list with api integration.
 4. Then filter the list according to category wise product listing.
 5. If category name is not found in product list then display "Empty List" or "No data found".
-6. Filter a List using price Condition.
+6. Implement the search functionality.
