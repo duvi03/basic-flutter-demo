@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/1_flutter_widget/pages/button_screen.dart';
 import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/1_flutter_widget/pages/listview_screen.dart';
+import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/1_flutter_widget/pages/tabbar_screen.dart';
 import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/1_flutter_widget/pages/textfiels_screen.dart';
 
 class WidgetHomeScreen extends StatelessWidget {
@@ -9,7 +10,7 @@ class WidgetHomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         appBar: AppBar(
           title: const Text("Flutter Widget"),
@@ -17,6 +18,7 @@ class WidgetHomeScreen extends StatelessWidget {
             Tab(text: "TextFields"),
             Tab(text: "Button"),
             Tab(text: "Listview"),
+            Tab(text: "Tab Bar"),
           ]),
         ),
         body: Center(
@@ -25,6 +27,7 @@ class WidgetHomeScreen extends StatelessWidget {
               TextFieldsScreen(),
               const ButtonScreen(),
               const ListViewScreen(),
+              const TabbarScreen(),
             ],
           ),
         ),
