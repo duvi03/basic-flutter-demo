@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class ConstWidget{
-  static commonItem({ required String index,required String name,VoidCallback? onTap}){
-    return  GestureDetector(
-      onTap: onTap ?? (){},
+class ConstWidget {
+  static commonItem({required String index, required String name, String? desc, VoidCallback? onTap}) {
+    return GestureDetector(
+      onTap: onTap ?? () {},
       child: Container(
         height: 120,
         width: double.infinity,
         margin: const EdgeInsets.only(bottom: 12),
-        padding: const EdgeInsets.symmetric(horizontal: 8,vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
         decoration: BoxDecoration(
           color: Colors.purple.shade100,
           borderRadius: BorderRadius.circular(12),
@@ -30,14 +30,30 @@ class ConstWidget{
                     bottomRight: Radius.circular(12),
                   ),
                 ),
-                child: Center(
-                  child: Text(
-                    name,
-                    style: const TextStyle(
-                      fontSize: 26,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        name,
+                        maxLines: 1,
+                        style: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          overflow: TextOverflow.ellipsis
+                        ),
+                      ),
+                      Text(
+                        desc ?? "",
+                        style: const TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.normal,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),

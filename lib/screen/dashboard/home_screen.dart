@@ -48,33 +48,32 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ConstWidget.commonItem(
-                index: "1",
-                name: "Flutter Widget",
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const WidgetHomeScreen()));
-                }
-              ),
+                  index: "1",
+                  name: "Flutter Widget",
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const WidgetHomeScreen()));
+                  }),
               ConstWidget.commonItem(
-                index: "2",
-                name: "Sqlite Database",
-                  onTap: (){
+                  index: "2",
+                  name: "CRUD Sqlite Database",
+                  desc: "using setState Management",
+                  onTap: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const SqlHomeScreen()));
-                  }
-              ),
+                  }),
               ConstWidget.commonItem(
-                index: "3",
-                name: "Dark Theme",
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const DarkThemeScreen()));
-                }
-              ),
+                  index: "3",
+                  name: "Dark Theme",
+                  desc: "using Provider",
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const DarkThemeScreen()));
+                  }),
               ConstWidget.commonItem(
-                index: "4",
-                name: "Product Get Api",
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const ApiHomeScreen()));
-                }
-              ),
+                  index: "4",
+                  name: "Product List",
+                  desc: "using GetX and Api Calling",
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const ApiHomeScreen()));
+                  }),
             ],
           ),
         ),
