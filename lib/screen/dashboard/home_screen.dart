@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learning_demo/screen/dashboard/common_item.dart';
 import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/1_flutter_widget/widget_home_screen.dart';
 import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/2_sqlite_database/screen/sql_home_screen.dart';
-// import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/3_dark_theme/dark_theme_screen.dart';
+import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/3_dark_theme/screen/dark_theme_screen.dart';
 import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/4_product_get_api/screen/api_home_screen.dart';
 
 class HomePage extends StatefulWidget {
@@ -65,8 +65,7 @@ class _HomePageState extends State<HomePage> {
                 index: "3",
                 name: "Dark Theme",
                 onTap: (){
-
-                  // Navigator.push(context, MaterialPageRoute(builder: (context) => const DarkThemeScreen()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const DarkThemeScreen()));
                 }
               ),
               ConstWidget.commonItem(
