@@ -19,17 +19,19 @@ class ButtonScreen extends StatelessWidget {
               },
               child: const Text('Text Button'),
             ),
+            const SizedBox(height: 10),
             ElevatedButton(
-              style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.green)),
+              style: ButtonStyle(backgroundColor: WidgetStateProperty.all<Color>(Colors.green)),
               onPressed: () {
                 ScaffoldMessenger.of(context)
                     .showSnackBar(const SnackBar(content: Text('Elevated Button')));
               },
               child: const Text('Elevated Button'),
             ),
+            const SizedBox(height: 10),
             OutlinedButton(
                 style: ButtonStyle(
-                  overlayColor: MaterialStateProperty.all<Color>(Colors.orange),
+                  overlayColor: WidgetStateProperty.all<Color>(Colors.orange),
                 ),
                 onPressed: () {
                   ScaffoldMessenger.of(context)

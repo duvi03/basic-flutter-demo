@@ -120,30 +120,39 @@ class ListViewScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (_) => const ListviewStaticScreen()));
-                },
-                child: const Text('Static ListView')),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (_) => const ListviewStaticScreen()));
+              },
+              child: const Text('Static ListView'),
+            ),
+            const SizedBox(height: 10),
             ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (_) => const ListviewBuilderScreen()));
-                },
-                child: const Text('ListView Builder')),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (_) => const ListviewBuilderScreen()));
+              },
+              child: const Text('ListView Builder'),
+            ),
+            const SizedBox(height: 10),
             ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (_) => const ListviewSeparatedScreen()));
-                },
-                child: const Text('ListView Separated')),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (_) => const ListviewSeparatedScreen()));
+              },
+              child: const Text('ListView Separated'),
+            ),
+            const SizedBox(height: 10),
             ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (_) => const ListviewHorizontalScreen()));
-                },
-                child: const Text('ListView Horizontal')),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (_) => const ListviewHorizontalScreen()));
+              },
+              child: const Text('ListView Horizontal'),
+            ),
+            const SizedBox(height: 10),
             ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (_) => const GridViewScreen()));
-                },
-                child: const Text('GridView Internet Data')),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (_) => const GridViewScreen()));
+              },
+              child: const Text('GridView Internet Data'),
+            ),
           ],
         ),
       ),
@@ -156,7 +165,7 @@ class ListviewStaticScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<String> list = List.generate(20, (index) => "Simple List Data ${index + 1}");
+    List<String> list = List.generate(10, (index) => "Simple List Data ${index + 1}");
 
     return Scaffold(
       appBar: AppBar(
@@ -165,11 +174,11 @@ class ListviewStaticScreen extends StatelessWidget {
       body: ListView(
         children: list
             .map((value) => Card(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(value),
-          ),
-        ))
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(value),
+                  ),
+                ))
             .toList(),
       ),
     );
@@ -194,9 +203,9 @@ class ListviewBuilderScreen extends StatelessWidget {
             itemBuilder: (context, index) {
               return Card(
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(list[index]),
-                  ));
+                padding: const EdgeInsets.all(8.0),
+                child: Text(list[index]),
+              ));
             }),
       ),
     );
@@ -223,11 +232,11 @@ class ListviewSeparatedScreen extends StatelessWidget {
             );
           },
           separatorBuilder: (context, index) => const Divider(
-            color: Colors.green,
-            thickness: 2,
-            indent: 4,
-            endIndent: 5,
-          ),
+                color: Colors.green,
+                thickness: 2,
+                indent: 4,
+                endIndent: 5,
+              ),
           itemCount: list.length),
     );
   }
@@ -251,9 +260,9 @@ class ListviewHorizontalScreen extends StatelessWidget {
             itemBuilder: (context, index) {
               return const Card(
                   child: Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: FlutterLogo(size: 100),
-                  ));
+                padding: EdgeInsets.all(8.0),
+                child: FlutterLogo(size: 100),
+              ));
             }),
       ),
     );
@@ -291,25 +300,28 @@ class _GridViewScreenState extends State<GridViewScreen> {
           children: list
               .map(
                 (e) => ClipRRect(
-              borderRadius: BorderRadius.circular(12),
-              child: Stack(children: [
-                Image.network(e.thumbnail()),
-                Positioned(
-                  bottom: 0,
-                  child: Container(
-                    height: 32,
-                    width: 1000,
-                    color: Colors.black45,
-                  ),
+                  borderRadius: BorderRadius.circular(12),
+                  child: Stack(children: [
+                    Image.network(e.thumbnail()),
+                    Positioned(
+                      bottom: 0,
+                      child: Container(
+                        height: 32,
+                        width: 1000,
+                        color: Colors.black45,
+                      ),
+                    ),
+                    Positioned(
+                      left: 8,
+                      bottom: 8,
+                      child: Text(
+                        e.author,
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ]),
                 ),
-                Positioned(
-                  left: 8,
-                  bottom: 8,
-                  child: Text(e.author,style: TextStyle(color: Colors.white),),
-                ),
-              ]),
-            ),
-          )
+              )
               .toList(),
         ),
       ),
