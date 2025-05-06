@@ -44,9 +44,9 @@ This is a simple Flutter demo application showcasing core Flutter features and a
 - Supported languages:
   - English
   - Hindi
+  - Gujarati
   - Spanish
   - French
-  - Arabic
 - Dynamic text switching based on selected locale
 - Language selection can be toggled in the app
 
