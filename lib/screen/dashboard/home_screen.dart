@@ -63,17 +63,17 @@ class _HomePageState extends State<HomePage> {
                   }),
               ConstWidget.commonItem(
                   index: "3",
-                  name: "Dark Theme",
-                  desc: "using Provider",
-                  onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const DarkThemeScreen()));
-                  }),
-              ConstWidget.commonItem(
-                  index: "4",
                   name: "Product Listing",
                   desc: "using GetX and REST-Api Calling",
                   onTap: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const ApiHomeScreen()));
+                  }),
+              ConstWidget.commonItem(
+                  index: "4",
+                  name: "Dark Theme",
+                  desc: "using Provider",
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const DarkThemeScreen()));
                   }),
             ],
           ),
