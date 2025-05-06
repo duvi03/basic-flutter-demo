@@ -6,40 +6,47 @@ This is a simple Flutter demo application showcasing core Flutter features and a
 
 ### 1. **Flutter Widgets**
 - Implementation of both **StatelessWidget** and **StatefulWidget**
-- UI elements:
+- Common UI elements:
   - `TextField` for user input
-  - `ElevatedButton` and other buttons for actions
-  - `ListView` for displaying lists
-  - `TabBar` and `TabBarView` for tabbed navigation
+  - `ElevatedButton` and other interactive buttons
+  - List Display Widgets:
+    - **Simple `ListView`** – static list with predefined children
+    - `ListView.builder` – for dynamic list rendering
+    - `ListView.separated` – for lists with custom separators
+    - Horizontal `ListView` – scrollable lists in horizontal direction
+    - `GridView.builder` – for grid-style item layouts
+  - Navigation:
+    - `TabBar` and `TabBarView` for tabbed navigation interface
 
 ### 2. **CRUD Operations with SQLite**
-- Local storage solution using the `sqflite` plugin
-- Features:
-  - Add, Read, Update, and Delete (CRUD) operations
-  - Simple product management module
-  - Persistent local data
+- Local storage using the `sqflite` package
+- Full CRUD functionality:
+  - Create, Read, Update, and Delete items
+  - Persistent data storage on the device
+  - Clean separation of database logic
 
 ### 3. **Product List with REST API using GetX**
-- Integrated with a mock or real RESTful API
-- Utilized **GetX** for:
+- RESTful API integration to fetch and display product data
+- `GetX` used for:
   - State management
-  - API calling and data handling
-  - Reactive UI updates
+  - API communication
+  - Dependency injection and reactive UI updates
 
 ### 4. **Dark Theme with Provider**
-- Theming handled using `provider` package
+- Theming managed using the `provider` package
 - Features:
   - Toggle between light and dark themes
-  - Smooth UI updates based on user preferences
+  - State persists with theme settings
+  - Seamless transition with responsive UI updates
 
 ## 🛠️ Tech Stack
 
 - **Flutter** (latest stable version)
 - **Dart**
 - **SQLite** via `sqflite` package
-- **GetX** for state management and navigation
-- **Provider** for theme management
-- **HTTP** for API requests
+- **GetX** for state management and routing
+- **Provider** for theme switching
+- **HTTP** for API communication
 
 ## 📦 Installation
 
