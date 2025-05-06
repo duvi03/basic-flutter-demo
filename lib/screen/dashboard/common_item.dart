@@ -47,10 +47,12 @@ class ConstWidget {
                       ),
                       Text(
                         desc ?? "",
+                        maxLines: 1,
                         style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.normal,
                           color: Colors.white,
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
                     ],

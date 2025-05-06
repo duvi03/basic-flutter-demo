@@ -2,10 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/4_product_get_api/model/catgory_model.dart';
-import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/4_product_get_api/model/product_model.dart';
+import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/3_product_get_api/model/category_model.dart';
+import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/3_product_get_api/model/product_model.dart';
 import 'package:get/get.dart';
-import 'package:get/get_rx/get_rx.dart';
 import 'package:http/http.dart' as http;
 
 class ApiHomeController extends GetxController {

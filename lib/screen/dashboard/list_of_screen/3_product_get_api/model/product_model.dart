@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/4_product_get_api/model/catgory_model.dart';
+import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/3_product_get_api/model/category_model.dart';
 
 
 class ProductModel {

@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learning_demo/screen/dashboard/common_item.dart';
 import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/1_flutter_widget/widget_home_screen.dart';
 import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/2_sqlite_database/screen/sql_home_screen.dart';
-import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/3_dark_theme/screen/dark_theme_screen.dart';
-import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/4_product_get_api/screen/api_home_screen.dart';
+import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/3_product_get_api/screen/api_home_screen.dart';
+import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/4_dark_theme/screen/dark_theme_screen.dart';
+import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/5_localization/localization_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -64,7 +65,7 @@ class _HomePageState extends State<HomePage> {
               ConstWidget.commonItem(
                   index: "3",
                   name: "Product Listing",
-                  desc: "using GetX and REST-Api Calling",
+                  desc: "using REST-Api Calling",
                   onTap: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const ApiHomeScreen()));
                   }),
@@ -74,6 +75,13 @@ class _HomePageState extends State<HomePage> {
                   desc: "using Provider",
                   onTap: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const DarkThemeScreen()));
+                  }),
+              ConstWidget.commonItem(
+                  index: "5",
+                  name: "Localization",
+                  desc: "using GetX",
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const LocalizationScreen()));
                   }),
             ],
           ),

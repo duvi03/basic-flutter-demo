@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_learning_demo/core/constant/int_extension_file.dart';
-import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/4_product_get_api/controller/api_home_controller.dart';
-import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/4_product_get_api/screen/common_product_item.dart';
+import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/3_product_get_api/controller/api_home_controller.dart';
+import 'package:flutter_learning_demo/screen/dashboard/list_of_screen/3_product_get_api/screen/common_product_item.dart';
 import 'package:get/get.dart';
 
 class ApiHomeScreen extends StatelessWidget {
