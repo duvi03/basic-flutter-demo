@@ -21,21 +21,21 @@ class _HomePageState extends State<HomePage> {
         title: const Row(
           children: [
             Text(
-              "Flutter",
+              'Basic',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.orange,
+                fontSize: 22.0,
+              ),
+            ),
+            Text(
+              " Flutter Learning",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.blue,
                 fontSize: 22.0,
               ),
             ),
-            Text(
-              'Learning',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.orange,
-                fontSize: 22.0,
-              ),
-            )
           ],
         ),
       ),
@@ -50,13 +50,14 @@ class _HomePageState extends State<HomePage> {
               ConstWidget.commonItem(
                   index: "1",
                   name: "Flutter Widget",
+                  desc: "using stateless and stateful widget",
                   onTap: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const WidgetHomeScreen()));
                   }),
               ConstWidget.commonItem(
                   index: "2",
-                  name: "CRUD Sqlite Database",
-                  desc: "using setState Management",
+                  name: "CRUD Database",
+                  desc: "using Sqlite Database Management",
                   onTap: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const SqlHomeScreen()));
                   }),
@@ -69,8 +70,8 @@ class _HomePageState extends State<HomePage> {
                   }),
               ConstWidget.commonItem(
                   index: "4",
-                  name: "Product List",
-                  desc: "using GetX and Api Calling",
+                  name: "Product Listing",
+                  desc: "using GetX and REST-Api Calling",
                   onTap: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const ApiHomeScreen()));
                   }),
