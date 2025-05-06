@@ -1,16 +1,49 @@
-# flutter_learning_demo
+# **Basic Flutter Demo App**
 
-A new Flutter project.
+This is a simple Flutter demo application showcasing core Flutter features and architectural patterns, ideal for beginners and intermediate developers. The project integrates essential widgets, SQLite database operations, state management solutions, and API handling.
 
-## Getting Started
+## 🚀 Features
 
-This project is a starting point for a Flutter application.
+### 1. **Flutter Widgets**
+- Implementation of both **StatelessWidget** and **StatefulWidget**
+- UI elements:
+  - `TextField` for user input
+  - `ElevatedButton` and other buttons for actions
+  - `ListView` for displaying lists
+  - `TabBar` and `TabBarView` for tabbed navigation
 
-A few resources to get you started if this is your first Flutter project:
+### 2. **CRUD Operations with SQLite**
+- Local storage solution using the `sqflite` plugin
+- Features:
+  - Add, Read, Update, and Delete (CRUD) operations
+  - Simple product management module
+  - Persistent local data
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 3. **Product List with REST API using GetX**
+- Integrated with a mock or real RESTful API
+- Utilized **GetX** for:
+  - State management
+  - API calling and data handling
+  - Reactive UI updates
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 4. **Dark Theme with Provider**
+- Theming handled using `provider` package
+- Features:
+  - Toggle between light and dark themes
+  - Smooth UI updates based on user preferences
+
+## 🛠️ Tech Stack
+
+- **Flutter** (latest stable version)
+- **Dart**
+- **SQLite** via `sqflite` package
+- **GetX** for state management and navigation
+- **Provider** for theme management
+- **HTTP** for API requests
+
+## 📦 Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/basic-flutter-demo-app.git
+   cd basic-flutter-demo-app
