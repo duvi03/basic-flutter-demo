@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
               ConstWidget.commonItem(
                   index: "3",
                   name: "Product Listing",
-                  desc: "using REST-Api Calling",
+                  desc: "using REST API Calling",
                   onTap: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const ApiHomeScreen()));
                   }),
