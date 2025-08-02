@@ -44,15 +44,15 @@ This is a simple Flutter demo application showcasing core Flutter features and a
 - Supported languages:
   - English
   - Hindi
-  - Gujarati
   - Spanish
   - French
+  - Gujarati
 - Dynamic text switching based on selected locale
 - Language selection can be toggled in the app
 
 ## 🛠️ Tech Stack
 
-- **Flutter** (latest stable version)
+- **Flutter** (version: 3.29.3)
 - **Dart**
 - **SQLite** via `sqflite` package
 - **GetX** for state management, routing, and localization
@@ -63,5 +63,4 @@ This is a simple Flutter demo application showcasing core Flutter features and a
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/basic-flutter-demo-app.git
-   cd basic-flutter-demo-app
+   git clone https://github.com/duvi03/basic-flutter-demo.git
